@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app01">
+<head>
+    <title></title>
+    <script src="js/angular.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+    <h1>Hello WOrld</h1>
+    this is angular js. Please calculate the addition 20+10={{ 20+10 }}
+
+    <div id="s1" ng-controller="controller1 as cont1">
+        {{ cont1.ControllerName }}
+    </div>
+
+    <div id="s2" ng-controller="controller2 as cont2">
+        {{ cont2.ControllerName }}
+
+    </div>
+
+    <br /><hr />
+    <h1>ng-directivies (show & hide)</h1>
+
+    <div ng-controller="controller3 as cont3">
+        <h3 ng-show="cont3.Show">This is show h3 tag</h3>
+        <h3 ng-hide="cont3.Hide">This is hide h3 tag</h3>
+    </div>
+    <br /><hr />
+
+    <div ng-controller="controller4 as cont4">     
+        <h3 ng-repeat="repeatchar in cont4.name.split(',')"> {{ repeatchar }} </h3>
+        <br />
+        <ul>
+            <li ng-repeat="rec in cont4.Info"> {{ rec.Name + " " + rec.MobNo  }}</li>
+        </ul>
+    </div>
+</body>
+</html>
